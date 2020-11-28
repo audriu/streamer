@@ -1,0 +1,11 @@
+{
+  "name": "streamer",
+  "main": "streamer.js",
+  "dependencies": {
+    "async-child-process": "^1.1.1",
+    "child_process": "^1.0.2",
+    "chrome-launcher": "^0.13.4",
+    "chrome-remote-interface": "^0.28.2",
+    "winston": "^3.0.0-rc1"
+  }
+}

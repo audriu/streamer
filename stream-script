@@ -1,0 +1,17 @@
+#!/bin/bash
+#sudo apt update && sudo apt -y upgrade && sudo apt -y install mc nodejs npm tmux gdebi-core ffmpeg && sudo apt-get clean
+#wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+#sudo gdebi -n google-chrome-stable_current_amd64.deb
+#mv google-chrome-stable_current_amd64.deb /tmp/
+#cd streamer/
+#npm install
+#--no-sandbox
+#tmux
+
+cd streamer/
+rm log
+
+while [ true ]
+do
+   node sream.js https://lichess.org/tv rtmp://a.rtmp.youtube.com/live2/
+done
