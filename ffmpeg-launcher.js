@@ -45,8 +45,8 @@ const ops = [
     '-thread_queue_size',
     '1024',
     '-i',
-    'http://eteris.startfm.lt/startfm.mp3',
-    //'rtp://127.0.0.1:1234',
+    //'http://eteris.startfm.lt/startfm.mp3',
+    'rtp://127.0.0.1:1234',
     '-acodec',
     'aac',
 

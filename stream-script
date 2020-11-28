@@ -1,17 +1,29 @@
 #!/bin/bash
-#sudo apt update && sudo apt -y upgrade && sudo apt -y install mc nodejs npm tmux gdebi-core ffmpeg && sudo apt-get clean
+#sudo apt update && sudo apt -y upgrade && sudo apt -y install mc nodejs npm tmux leiningen links lynx gdebi-core ffmpeg git && sudo apt-get clean
 #wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 #sudo gdebi -n google-chrome-stable_current_amd64.deb
 #mv google-chrome-stable_current_amd64.deb /tmp/
+#/////////////////////////////////////
+#fallocate -l 4G  /swap
+#mkswap /swap
+#swapon /swap
+#sudo nano /etc/rc.local
+#!/bin/bash
+#swapon /swap
+#sudo chmod a+x /etc/rc.local
+#/////////////////////////////////////
 #cd streamer/
 #npm install
 #--no-sandbox
 #tmux
 
 cd streamer/
-rm log
+DATE=$(date +'%d%m%Y-%H:%M%S')
+mkdir /tmp/log-$DATE
+touch log
+mv log /tmp/log-$DATE
 
-while [ true ]
-do
-   node sream.js https://lichess.org/tv rtmp://a.rtmp.youtube.com/live2/
-done
+#while [ true ]
+#do
+   #node stream.js https:// rtmp://a.rtmp.youtube.com/live2/
+#done

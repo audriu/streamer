@@ -1,18 +1,30 @@
 const winston = require('winston');
 
 const utils = winston.createLogger({
-  transports: [
-    new winston.transports.Console(),
-    new winston.transports.File({ filename: 'log' })
-  ]
+    transports: [
+        new winston.transports.Console(),
+        new winston.transports.File({filename: 'log'})
+    ]
 });
 
-const info = function (message){
-  utils.log({
-    level: 'info',
-    time: new Date(),
-    message: message
-  });
+//todo create debug log level
+const debug = function (message) {
+    utils.log({
+        level: 'info',
+        nivel: 'debug000',
+        time: new Date(),
+        message: message
+    });
+}
+
+exports.debug = debug;
+
+const info = function (message) {
+    utils.log({
+        level: 'info',
+        time: new Date(),
+        message: message
+    });
 }
 
 exports.info = info;
