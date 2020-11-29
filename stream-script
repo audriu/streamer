@@ -22,8 +22,10 @@ DATE=$(date +'%d%m%Y-%H:%M%S')
 mkdir /tmp/log-$DATE
 touch log
 mv log /tmp/log-$DATE
+mv log.bash /tmp/log-$DATE
 
-#while [ true ]
-#do
-   #node stream.js https:// rtmp://a.rtmp.youtube.com/live2/
-#done
+while [ true ]
+do
+  #http://localhost:3000/#/covid rtp://127.0.0.1:1234 /tmp/out0.flv
+  node stream.js http://google.com http://eteris.startfm.lt/startfm.mp3 rtmp://a.rtmp.youtube.com/live2/ky35-51x4-szpz-92m7-7bh6 2>&1 | tee log.bash
+done

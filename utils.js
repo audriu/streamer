@@ -41,8 +41,18 @@ exports.getUrl = function getUrl() {
     return url;
 }
 
+exports.getMusicUrl = function getMusicUrl() {
+    const url = args[1];
+    if (url === undefined || url === "") {
+        info("Exiting - music url is not defined");
+        process.exit(1);
+    }
+    info("Working on music url: " + url);
+    return url;
+}
+
 exports.getRtmpUrl = function getRtmpUrl() {
-    const rtmpUrl = args[1];
+    const rtmpUrl = args[2];
     if (rtmpUrl == null || rtmpUrl === "") {
         info("Exiting, rtmp url is not defined in the params");
         process.exit(1);

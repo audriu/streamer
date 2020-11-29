@@ -45,8 +45,7 @@ const ops = [
     '-thread_queue_size',
     '1024',
     '-i',
-    //'http://eteris.startfm.lt/startfm.mp3',
-    'rtp://127.0.0.1:1234',
+    utils.getMusicUrl(),
     '-acodec',
     'aac',
 
@@ -109,5 +108,4 @@ const ops = [
     '-f',
     'flv',
     utils.getRtmpUrl()
-    //'/tmp/out01.flv'
 ];
