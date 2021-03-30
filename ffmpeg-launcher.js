@@ -98,7 +98,8 @@ const ops = [
     stats.getStats.currentFPS,
     '-threads',
     '0',
-    //'-f', 'mp4', 'recording.mp4'
+    '-reorder_queue_size', '0',
+    '-f', 'rtp_mpegts',
     '-c:a',
     'aac',
     '-strict',

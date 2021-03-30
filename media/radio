@@ -1,0 +1,8 @@
+cd ~/media
+echo 'running radio'
+echo $(pwd)
+
+while [ true ]
+do
+	ffmpeg -re -f concat -safe 0 -i playlist -acodec libmp3lame -ar 11025 -rtsp_transport tcp -f rtp rtp://127.0.0.1:1234
+done

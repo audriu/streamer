@@ -1,0 +1,4 @@
+#ffmpeg -re -f concat -safe 0 -i plailist -acodec libmp3lame -ar 11025 -f rtp rtp://127.0.0.1:1234
+file 'neon-laser-horizon-by-kevin-macleod-from-filmmusic-io.mp3'
+file 'newer-wave-by-kevin-macleod-from-filmmusic-io.mp3'
+file 'voxel-revolution-by-kevin-macleod-from-filmmusic-io.mp3'
